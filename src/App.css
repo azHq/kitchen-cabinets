@@ -1,0 +1,45 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600&display=swap');
+*,html{
+  margin:0px;
+  padding:0px;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-weight:400;
+  box-sizing: border-box;
+}
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: #B4B4B4;
+  opacity: 1; /* Firefox */
+}
+
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+  color: #B4B4B4;
+}
+
+::-ms-input-placeholder { /* Microsoft Edge */
+  color: #B4B4B4;
+}
+.center{
+  display:flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+}
+.center-column{
+  display:flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  flex-direction:column !important;
+}
+.center-vertical{
+  display:flex;
+  align-items: center;
+}
+.center-horizontal{
+  display:flex;
+  justify-content:center;
+}
+.shadow1{
+  box-shadow:0px 4px 15px 0px #120f1913;
+}
+.shadow2{
+  box-shadow: 1px 4px 12px rgba(206, 194, 185, 0.3);
+}
