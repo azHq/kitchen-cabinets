@@ -16,6 +16,7 @@ export class Home extends Component {
     var card_item=[{name:"Eco-friendly Material",icon:seeding_icon},{name:"Eco-friendly Material",icon:design_icon},{name:"Eco-friendly Material",icon:customer_service_icon}];
     var filter=[{name:"KL",active:true},{name:"Pending",active:false},{name:"Johor",active:false}];
     var products=[{name:"Yellow Almond",image:image1,price:"16,000",rating:"4.4"},{name:"Grey Glossy",image:image2,price:"16,000",rating:"4.4"},{name:"Petaling Jaya",image:image1,price:"16,000",rating:"4.4"},{name:"Dark Grey",image:image2,price:"16,000",rating:"4.4"}];
+    var products2=[{name:"Dark Theme Cabinet",image:image1,price:"16,000"},{name:"Grey Theme Cabinet",image:image2,price:"17,000"}];
     return (
       <>
         <div className='body'>
@@ -38,11 +39,12 @@ export class Home extends Component {
                         Customize your kitchen cabinets & get prices instanly online
                     </div>
                 </div>
-                <div className='center' style={{flex:"1"}}>
-                    <div className='center' style={{background:"#FEB546",width:"110px",height:"40px",borderRadius:"50px"}}>
-                        <div style={{fontSize:"12px",color:"#2C2934",fontWeight:"600"}}>Get Quote</div>
-                    </div>
+                <div className='center' style={{height:"100%",flex:"1"}}>
+                    <button style={{background:"#FEB546",color:"#2C2934",fontWeight:"600",fontSize:"12px",width:"88px",height:"32px",borderRadius:"50px",border:"none"}}>
+                        Get Quote
+                    </button>
                 </div>
+                
             </div>
             {/* body card */}
             <div style={{marginTop:"24px",height:"213px",borderRadius:"30px 30px 0px 0px",backgroundColor:"#2C2934",position: "relative",overflow:"hidden",zIndex:"0px"}}>
@@ -63,7 +65,7 @@ export class Home extends Component {
             </div>
             {/* body card2 */}
             <div style={{marginTop:"-60px",borderRadius:"30px 30px 0px 0px",backgroundColor:"white",position: "relative",overflow:"hidden",zIndex:"0px",padding:"25px 15px"}}>
-                <div style={{fontSize:"15px",fontWeight:"600"}}>EXPLORE OUR Showrooms</div>
+                <div style={{fontSize:"15px",fontWeight:"600",color:"#414141"}}>EXPLORE OUR Showrooms</div>
                 <div style={{margin:"15px 0px 0px 0px",display:"flex",justifyContent:"start",position:"relative"}}>
                     {
                         filter.map((item,key)=>
@@ -81,7 +83,7 @@ export class Home extends Component {
                     }
                 </div>
                  <div style={{margin:"25px 0px",height:"80px",backgroundColor:"#221D2E",borderRadius:"16px",display:"flex",flexDirection:"row",justifyContent:"space-between",overflow:"hidden",position:"relative"}}>
-                    <div style={{flex:"1.3",margin:"10px 0px 0 20px",display:"flex",flexDirection:"column",justifyContent:"center"}}>
+                    <div style={{flex:"1.4",margin:"10px 0px 0 20px",display:"flex",flexDirection:"column",justifyContent:"center"}}>
                         <div style={{fontSize:"15px",fontWeight:"600",color:"white"}}>
                             Get Custom Cabinet Now
                         </div>
@@ -90,13 +92,29 @@ export class Home extends Component {
                         </div>
                     </div>
                     <div className='center' style={{flex:"1"}}>
-                        <div className='center' style={{background:"#FEB546",width:"88px",height:"32px",borderRadius:"50px"}}>
-                            <div style={{fontSize:"12px",color:"#2C2934",fontWeight:"600"}}>Quote Now</div>
-                        </div>
+                        <button className='center' style={{background:"#FEB546",color:"#2C2934",fontWeight:"600",fontSize:"12px",width:"88px",height:"32px",borderRadius:"50px",border:"none"}}>
+                            Quote Now
+                        </button>
                     </div>
                     <div style={{position:"absolute",right:"-2px",bottom:"-2px"}}>
                         <div style={{height:"38px",width:"55px",backgroundImage:`url(${rect_icon})`,backgroundRepeat:"no-repeat",backgroundPosition:"center",backgroundSize:"contain"}}></div>
                     </div>
+                </div>
+                <div style={{margin:"10px 0px",display:"flex",justifyContent:"space-between",alignItems:"center"}}>
+                    <div style={{fontSize:"15px",fontWeight:"600",color:"#414141"}}>OUR PREVIOUS JOBS</div>
+                    <div className='center' style={{width:"88px",height:"32px",background:`#2C2934`,borderRadius:"50px",marginRight:"6px"}}>
+                        <div style={{color:`white`,fontSize:"12px",fontWeight:"600"}}>
+                           View All
+                        </div>
+                    </div>
+                </div>
+                <div style={{margin:"15px 0px",display:"flex",flexWrap:"wrap",justifyContent:"space-between",position: "relative",}}>
+                    {
+                        products2.map((item,key)=>
+                        {
+                            return this.GetProductItem2(item,key);
+                        })
+                    }
                 </div>
             </div>
         </div>
@@ -145,6 +163,31 @@ export class Home extends Component {
                             <div style={{display:"flex",flexDirection:"row",alignItems:"center"}}>
                                 <div style={{height:"9px",width:"10px",backgroundImage:`url(${star_icon})`,backgroundRepeat:"no-repeat",backgroundPosition:"center",backgroundSize:"contain"}}></div>
                                 <div style={{marginLeft:"2px"}}>{item.rating}</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+          
+      </>
+    )
+  }
+  GetProductItem2=(item,key)=>{
+    return(
+      <>
+        <div style={{width:"157px",height:"220px",position:"relative"}}>
+            <div className='shadow2' key={key}  style={{width:"100%",height:"100%",background:`white`,borderRadius:"20px"}}>
+                <div style={{borderRadius:"16px",height:"100%",width:"100%",backgroundImage:`url(${item.image})`,backgroundPosition:"center",backgroundRepeat:"no-repeat",backgroundSize:"cover",position:"relative",overflow:"hidden"}}>
+                    <div style={{height:"55px",background:"white",color:`${item.active?"#FFFFFF":"#797979"}`,fontSize:"12px",position:"absolute",bottom:"0px",left:"0px",right:"0px",padding:"10px 10px 10px 12px"}}>
+                        <div style={{color:"#333333",fontSize:"13px",fontWeight:"600"}}>
+                            {item.name}
+                        </div> 
+                        <div style={{display:"flex",flexDirection:"row",justifyContent:"space-between"}}>
+                            <div style={{display:"flex",flexDirection:"row"}}>
+                                <div style={{color:"#525252",fontSize:"11px",fontWeight:"600"}}>RM</div>
+                                <div style={{marginLeft:"2px",color:"#797979",fontSize:"11px",fontWeight:"600"}}>{item.price}</div>
                             </div>
                         </div>
                     </div>
