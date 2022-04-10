@@ -1,0 +1,19 @@
+{
+  "files": {
+    "main.css": "/kitchen-cabinets/static/css/main.eeec5b14.css",
+    "main.js": "/kitchen-cabinets/static/js/main.ac4b796c.js",
+    "static/js/787.99a1b97b.chunk.js": "/kitchen-cabinets/static/js/787.99a1b97b.chunk.js",
+    "static/media/image2.png": "/kitchen-cabinets/static/media/image2.c66907800bfc0b568b7a.png",
+    "static/media/image1.png": "/kitchen-cabinets/static/media/image1.59142014c055a82c3d81.png",
+    "static/media/rect.png": "/kitchen-cabinets/static/media/rect.cb3a4c7c6365f71c8065.png",
+    "static/media/logo.svg": "/kitchen-cabinets/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
+    "index.html": "/kitchen-cabinets/index.html",
+    "main.eeec5b14.css.map": "/kitchen-cabinets/static/css/main.eeec5b14.css.map",
+    "main.ac4b796c.js.map": "/kitchen-cabinets/static/js/main.ac4b796c.js.map",
+    "787.99a1b97b.chunk.js.map": "/kitchen-cabinets/static/js/787.99a1b97b.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.eeec5b14.css",
+    "static/js/main.ac4b796c.js"
+  ]
+}
